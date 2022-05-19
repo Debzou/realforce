@@ -22,8 +22,8 @@
         </div>
     </form>
     my query
-    <div class="grid place-items-center">
-        <app-movie name="name1"></app-movie>
+    <div class="lg:flex grid place-items-center">
+        <app-movie *ngFor="let item of table" name="item" class="m-2"></app-movie>
     </div>
+
 </div>
-<router-outlet></router-outlet>
