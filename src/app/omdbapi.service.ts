@@ -10,8 +10,9 @@ export class OmdbapiService {
   constructor(private http: HttpClient) {
    }
 
-  getOmdb(){
-    return this.http.get("http://www.omdbapi.com/?t=batman&apikey=a226611d")
+  getOmdb(name:string, date:string, type:string){
+    return this.http.get(`http://www.omdbapi.com/?s=${name}&d=${date}&type=${type}&apikey=a226611d`)
+
   }
 
 }

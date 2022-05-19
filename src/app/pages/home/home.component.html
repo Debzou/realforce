@@ -2,27 +2,27 @@
     <form class="w-full max-w-sm">
         <div class="flex items-center border-b border-teal-500 py-2">
             <input class="appearance-none bg-transparent border-none lg:w-full w-24 text-gray-100 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Batman" aria-label="Full name" />
-            <button class="dropdown dropdown-hover">
+            <div class="dropdown dropdown-hover">
                 <label tabindex="0" class="btn m-1">Movies</label>
                 <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-20">
                     <li class="hover:text-white">Movies</li>
                     <li class="hover:text-white">Series</li>
                 </ul>
-            </button>
-            <button class="dropdown dropdown-hover">
+            </div>
+            <div class="dropdown dropdown-hover">
                 <label tabindex="0" class="btn m-1">Years</label>
-                    <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-20">
+                <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-20">
                     <li class="hover:text-white">2018</li>
                     <li class="hover:text-white">2017</li>
                     <li class="hover:text-white">2016</li>
                     <li class="hover:text-white">2015</li>
                 </ul>
-            </button>
-            <button class="btn btn-accent">Go</button>
+            </div>
+            <div class="btn btn-accent" (click)="go();">Go</div>
         </div>
     </form>
     my query
-    <div class="lg:flex grid place-items-center">
+    <div class="grid place-items-center lg:gap-3 lg:grid-cols-2 xl:gap-4 xl:grid-cols-3">
         <app-movie *ngFor="let item of table" name="item" class="m-2"></app-movie>
     </div>
 
