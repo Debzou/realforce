@@ -9,8 +9,12 @@ import { Component, Input, OnInit } from '@angular/core';
 export class MovieComponent implements OnInit {
   @Input()
   name: string | undefined
-  data: any
-
+  @Input()
+  years: string | undefined
+  @Input()
+  image: string | undefined
+  @Input()
+  imdbID:string | undefined
   constructor() {
   }
 

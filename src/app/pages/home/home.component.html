@@ -1,21 +1,22 @@
 <div class="grid place-items-center mt-12">
     <form class="w-full max-w-sm">
         <div class="flex items-center border-b border-teal-500 py-2">
-            <input class="appearance-none bg-transparent border-none lg:w-full w-24 text-gray-100 mr-3 py-1 px-2 leading-tight focus:outline-none" type="text" placeholder="Batman" aria-label="Full name" />
+
+            <input type="text" placeholder="Batman" (keyup)="inputName($event)" class="input input-bordered input-success w-full max-w-xs" />
             <div class="dropdown dropdown-hover">
-                <label tabindex="0" class="btn m-1">Movies</label>
+                <label tabindex="0" class="btn m-1">{{type}}</label>
                 <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-20">
-                    <li class="hover:text-white">Movies</li>
-                    <li class="hover:text-white">Series</li>
+                    <li (click)="dropdownTypes('movie')" class="hover:text-white hover:cursor-pointer">Movies</li>
+                    <li (click)="dropdownTypes('series')" class="hover:text-white hover:cursor-pointer">Series</li>
                 </ul>
             </div>
             <div class="dropdown dropdown-hover">
-                <label tabindex="0" class="btn m-1">Years</label>
+                <label tabindex="0" class="btn m-1">{{years}}</label>
                 <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-20">
-                    <li class="hover:text-white">2018</li>
-                    <li class="hover:text-white">2017</li>
-                    <li class="hover:text-white">2016</li>
-                    <li class="hover:text-white">2015</li>
+                    <li (click)="dropdownYears('2018')" class="hover:text-white hover:cursor-pointer">2018</li>
+                    <li (click)="dropdownYears('2017')" class="hover:text-white hover:cursor-pointer">2017</li>
+                    <li (click)="dropdownYears('2016')" class="hover:text-white hover:cursor-pointer">2016</li>
+                    <li (click)="dropdownYears('2015')" class="hover:text-white hover:cursor-pointer">2015</li>
                 </ul>
             </div>
             <div class="btn btn-accent" (click)="go();">Go</div>
@@ -23,7 +24,7 @@
     </form>
     my query
     <div class="grid place-items-center lg:gap-3 lg:grid-cols-2 xl:gap-4 xl:grid-cols-3">
-        <app-movie *ngFor="let item of table" name="item" class="m-2"></app-movie>
+        <app-movie *ngFor="let item of table" [name]="item.Title" [image]="item.Poster" [years]="item.Year" [imdbID]="item.imdbID" class="m-2"></app-movie>
     </div>
 
 </div>
