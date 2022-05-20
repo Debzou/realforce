@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './pages/home/home.component';
 import { MovieComponent } from './components/movie/movie.component';
 import { WatchlistsComponent } from './pages/watchlists/watchlists.component';
+import { FavoriteComponent } from './components/favorite/favorite.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { WatchlistsComponent } from './pages/watchlists/watchlists.component';
     NavbarComponent,
     HomeComponent,
     MovieComponent,
-    WatchlistsComponent
+    WatchlistsComponent,
+    FavoriteComponent
   ],
   imports: [
     BrowserModule,
