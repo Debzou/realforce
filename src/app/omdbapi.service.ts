@@ -11,7 +11,7 @@ export class OmdbapiService {
    }
 
   getOmdb(name:string, years:string, type:string){
-    return this.http.get(`http://www.omdbapi.com/?s=${name}&y=${years}&type=${type}&apikey=a226611d`)
+    return this.http.get(`https://www.omdbapi.com/?s=${name}&y=${years}&type=${type}&apikey=a226611d`)
 
   }
 
